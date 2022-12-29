@@ -11,11 +11,13 @@ function About({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 pt-24 justify-evenly mx-auto items-center'>
-        
+      className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center pt-24 '> 
+      {/* */}
+
         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl pb-5">
           About
         </h3>
+        {/*  */}
 
         <motion.div
         initial = {{
@@ -30,15 +32,18 @@ function About({}: Props) {
           x: 0,
         }}
         viewport = {{ once: true }}
-        className='-mb-15 mt-5 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[600px] xl:h-[500px] relative'
+        className='-mb-10 md:mb-0 flex-shrink-0 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[500px] relative'
           >
             <Image 
             src={avery2}
             alt="Avery Wagner"
+            className='rounded-full md:rounded-lg object-cover'
             fill
-            className='-mb-20 md:mb-10 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[600px] xl:h-[500px] relative'
             />
         </motion.div>
+
+        {/* -mb-10 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[600px] xl:h-[500px] relative */}
+        {/* md:mb-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[600px] xl:h-[500px] relative */}
 
         {/* TODO */}
 
@@ -60,7 +65,7 @@ function About({}: Props) {
           ></motion.img> */}
 
         <div className='space-y-10 px-0 md:px-10'>
-          <h4 className='text-4xl font-semibold'>
+          <h4 className='text-4xl font-semibold pt-5'>
             Here's a <span className='underline decoration-[#F7AB0A]/50'>little</span>{" "} background
           </h4>
           <p className='text-base'>
