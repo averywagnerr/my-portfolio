@@ -12,13 +12,12 @@ function About({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center pt-24 '> 
-      {/* */}
 
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl pb-5">
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
           About
         </h3>
-        {/*  */}
-
+        <span className='pb-10'></span>
+        
         <motion.div
         initial = {{
           x: -200,
@@ -32,7 +31,7 @@ function About({}: Props) {
           x: 0,
         }}
         viewport = {{ once: true }}
-        className='-mb-10 md:mb-0 flex-shrink-0 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[500px] relative'
+        className='-mb-10 md:mb-0 flex-shrink-0 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[500px] relative md:pt-20 xl:pt-32'
           >
             <Image 
             src={avery2}
@@ -41,6 +40,7 @@ function About({}: Props) {
             fill
             />
         </motion.div>
+        <span className='pt-6'></span>
 
         {/* -mb-10 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[600px] xl:h-[500px] relative */}
         {/* md:mb-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[600px] xl:h-[500px] relative */}
