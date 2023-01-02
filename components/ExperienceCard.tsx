@@ -32,11 +32,11 @@ export default function ExperienceCard({ experience }: Props) {
                 {
                 experience.technologies.map((technology) => (<img 
                     key={technology._id}
-                    className="h-10 w-10 rounded-full object-contain"
+                    className="h-8 w-8 rounded-large object-scale-down"
                     src={urlFor(technology.image).url()}
                 />))}
             </div>
-            <p className='uppercase py-5 text-gray-300'>
+            <p className='uppercase py-3 text-gray-300'>
                 {new Date(experience.dateStarted).toDateString()} - {experience.isCurrentlyWorkingHere 
                 ? "Present"
                 : new Date(experience.dateEnded).toDateString()}
