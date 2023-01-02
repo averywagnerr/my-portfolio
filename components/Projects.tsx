@@ -29,7 +29,7 @@ function Projects({ projects }: Props) {
                     src={urlFor(project?.image).url()}
                     alt=''
                     />
-                    <div className='space-y-10  px-0 md:px-10 max-w-6xl'>
+                    <div className='space-y-6  px-0 md:px-10 max-w-6xl'>
                         <h4 className='text-3xl font-semibold text-center'>
                             <span className='underline decoration-[#F7AB0A]/50'>Case Study {i + 1} of {projects.length}:</span>{" "}
                             {project?.title}
@@ -38,7 +38,7 @@ function Projects({ projects }: Props) {
                         <div className='flex items-center space-x-2 justify-center'>
                         {project?.technologies.map(technology => (
                             <img 
-                            className='h-10 w-10'
+                            className='h-8 w-8'
                             key={technology._id}
                             src={urlFor(technology.image).url()}
                             alt=''
