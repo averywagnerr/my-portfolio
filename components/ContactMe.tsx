@@ -2,6 +2,7 @@ import React from 'react';
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { PageInfo } from '../typings';
+import { motion } from 'framer-motion';
 
 type Inputs = {
     name: string;
@@ -26,7 +27,11 @@ export default function ContactMe({ pageInfo }: Props) {
 
     return (
     
-    <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center  mb-16'>
+    <motion.div 
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 1.5 }}
+    className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center  mb-16'>
         <h3 className='absolute top-20 uppercase tracking-[20px] text-gray-500 text-xl'>
             Contact
         </h3>
@@ -66,6 +71,6 @@ export default function ContactMe({ pageInfo }: Props) {
                 className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg '>Submit</button>
             </form>
         </div>
-    </div>
+    </motion.div>
   )
 }
