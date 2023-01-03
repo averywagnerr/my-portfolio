@@ -18,16 +18,13 @@ function Projects({ projects }: Props) {
             Projects
         </h3>
 
-        <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin top-12'>
+        <div className='-ml-[16px] relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin top-12'>
             {projects.map((project, i) => (
                 <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
                     <motion.img 
                     initial={{ 
                         opacity: 0, 
                         scale: 0.5 }}
-                    // animate={{ 
-                    //     opacity: 1, 
-                    //     scale: 1 }}
                     transition={{
                       duration: 1.2,
                       delay: 0.4,
@@ -39,7 +36,7 @@ function Projects({ projects }: Props) {
                     }}
                     src={urlFor(project?.image).url()}
                     alt=''
-                    className='w-[calc(10rem+9vw)] h-[calc(8rem+8vw)] object-cover rounded-lg'
+                    className='w-[calc(10rem+9vw)] h-[calc(8rem+8vw)] object-cover rounded-lg shadow-[0_0_16px_2px] shadow-black/30'
                     
                     />
                     <div className='space-y-4 px-0 md:px-10 max-w-6xl'>
